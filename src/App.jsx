@@ -7,6 +7,7 @@ import NavSection from "./components/NavSection";
 import ReactLenis from "lenis/react";
 import HeroParallax from "./pages/ParallaxImages";
 import Tes from "./pages/Tes";
+import AnimatedNavbar from "./pages/AnimatedNavbar";
 
 function App() {
   return (
@@ -17,12 +18,7 @@ function App() {
         <main className="flex-1">
           <FlipText />
           <HeroParallax />
-          <section
-            id="tes-sec"
-            className="h-screen items-center flex justify-center"
-          >
-            <Tes />
-          </section>
+          <AnimatedNavbar />
         </main>
       </div>
     </ReactLenis>
