@@ -1,7 +1,21 @@
 import React from "react";
 import { motion } from "motion/react";
 
-const FlipLink = ({ children, href }) => {
+const FlipText = () => {
+  return (
+    <section
+      id="flip-text"
+      className="flex flex-col items-center justify-center h-screen"
+    >
+      <FlipTextComponent href="#">Facebook</FlipTextComponent>
+      <FlipTextComponent href="#">instagram</FlipTextComponent>
+      <FlipTextComponent href="#">linkedin</FlipTextComponent>
+      <FlipTextComponent href="#">twitter</FlipTextComponent>
+    </section>
+  );
+};
+
+const FlipTextComponent = ({ children, href }) => {
   const DURATION = 0.25;
   const STAGGER = 0.025;
 
@@ -10,7 +24,7 @@ const FlipLink = ({ children, href }) => {
       initial="initial"
       whileHover="hovered"
       href={href}
-      className="relative block overflow-hidden whitespace-nowrap text-4xl font-black uppercase sm:text-7xl md:text-8xl lg:text-9xl"
+      className="relative block overflow-hidden whitespace-nowrap text-4xl font-black uppercase sm:text-6xl md:text-7xl lg:text-8xl"
       style={{ lineHeight: 0.9 }}
     >
       <div>
@@ -53,4 +67,4 @@ const FlipLink = ({ children, href }) => {
   );
 };
 
-export default FlipLink;
+export default FlipText;
